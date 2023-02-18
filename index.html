@@ -10,7 +10,7 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style/style.css" />
   </head>
   <body>
     <header class="header-container">
@@ -19,7 +19,7 @@
         <div class="header-sub-title">Geometry Genius</div>
       </div>
       <div class="blog">
-        <button class="blog-btn btn btn-primary">Blog</button>
+        <button class="blog-btn btn btn-primary" id="blog-btn"><a href="blog.html" style="color: white;">Blog</a> </button>
       </div>
     </header>
 
@@ -29,7 +29,7 @@
 
                 <!-- traingle - section -->
 
-          <div class="area-container">
+          <div class="area-container" id="traingle-id">
             <div class="area-section">
               <div class="area-image">
                 <img src="images/triangle.png" alt="" />
@@ -52,7 +52,7 @@
 
             <!-- rectangle - section  -->
 
-          <div class="area-container">
+          <div class="area-container" id="rectangle-id">
             <div class="area-section">
               <div class="area-image">
                 <img src="images/rectangle.png" alt="" />
@@ -61,21 +61,21 @@
               <div class="equation"><p>Area (A) = w x l</p></div>
               <div class="area-input-field">
                 <div class="input-field me-3">
-                  <input type="text" placeholder="w" />cm
+                  <input type="text" placeholder="w" id="rect-w-value"/>cm
                 </div>
                 <div class="input-field">
-                  <input type="text" placeholder="l" />cm
+                  <input type="text" placeholder="l" id="rect-l-value"/>cm
                 </div>
               </div>
               <div class="btn">
-                <button class="btn btn-primary w-75">Calculate</button>
+                <button class="btn btn-primary w-75" id="rectangle-btn">Calculate</button>
               </div>
             </div>
           </div>
 
             <!-- parallelogram - section  -->
 
-          <div class="area-container">
+          <div class="area-container" id="parallelogram-id">
             <div class="area-section">
               <div class="area-image">
                 <img src="images/parallelogram.png" alt="" />
@@ -84,14 +84,14 @@
               <div class="equation"><p>Area (A) = b x h</p></div>
               <div class="area-input-field">
                 <div class="input-field me-3">
-                  <input type="text" placeholder="b" />cm
+                  <input type="text" placeholder="b" id="parallelogram-base"/>cm
                 </div>
                 <div class="input-field">
-                  <input type="text" placeholder="h" />cm
+                  <input type="text" placeholder="h" id="parallelogram-height"/>cm
                 </div>
               </div>
               <div class="btn">
-                <button class="btn btn-primary w-75">Calculate</button>
+                <button class="btn btn-primary w-75" id="parallelogram-btn">Calculate</button>
               </div>
             </div>
           </div>
@@ -99,8 +99,10 @@
           <!-- calculation-section -->
 
           <div class="area-calculate-container">
-            <div class="area-calculate-section">
-              <h3>Area Calculation</h3>
+            <h3>Area Calculation</h3>
+            <div class="area-calculate-section" id="area-calculate-section">
+              <ol id="order-list"></ol>
+              <!-- <div id="div-id"></div> -->
             </div>
           </div>
         </div>
@@ -111,7 +113,7 @@
 
                 <!-- rhombus section  -->
 
-            <div class="area-container">
+            <div class="area-container" id="rhombus-id">
                 <div class="area-section">
                   <div class="area-image">
                     <img src="images/rhombus.png" alt="" />
@@ -120,21 +122,21 @@
                   <div class="equation"><p>Area (A) = 0.5 x d1 x d2</p></div>
                   <div class="area-input-field">
                     <div class="input-field me-3">
-                      <input type="text" placeholder="d1" />cm
+                      <input type="text" placeholder="d1" id="rhombusd1"/>cm
                     </div>
                     <div class="input-field">
-                      <input type="text" placeholder="d2" />cm
+                      <input type="text" placeholder="d2" id="rhombusd2"/>cm
                     </div>
                   </div>
                   <div class="btn">
-                    <button class="btn btn-primary w-75">Calculate</button>
+                    <button class="btn btn-primary w-75" id="rhombus-btn">Calculate</button>
                   </div>
                 </div>
               </div>
 
                     <!-- pentagon section -->
 
-              <div class="area-container">
+              <div class="area-container" id="pentagon-id">
                 <div class="area-section">
                   <div class="area-image">
                     <img src="images/pentagon.png" alt="" />
@@ -143,21 +145,21 @@
                   <div class="equation"><p>Area (A) = 0.5 x p x b</p></div>
                   <div class="area-input-field">
                     <div class="input-field me-3">
-                      <input type="text" placeholder="p" />cm
+                      <input type="text" placeholder="p" id="pentagon-p"/>cm
                     </div>
                     <div class="input-field">
-                      <input type="text" placeholder="b" />cm
+                      <input type="text" placeholder="b" id="pentagon-b"/>cm
                     </div>
                   </div>
                   <div class="btn">
-                    <button class="btn btn-primary w-75">Calculate</button>
+                    <button class="btn btn-primary w-75" id="pentagon-btn">Calculate</button>
                   </div>
                 </div>
               </div>
 
                         <!-- ellipse section  -->
 
-              <div class="area-container">
+              <div class="area-container" id="ellipse-id">
                 <div class="area-section">
                   <div class="area-image">
                     <img src="images/ellipse.png" alt="" />
@@ -166,14 +168,14 @@
                   <div class="equation"><p>Area (A) =  <img src="images/pi.png" alt="" class="pi-img"> x a x b</p></div>
                   <div class="area-input-field">
                     <div class="input-field me-3">
-                      <input type="text" placeholder="a" />cm
+                      <input type="text" placeholder="a" id="ellipse-a"/>cm
                     </div>
                     <div class="input-field">
-                      <input type="text" placeholder="b" />cm
+                      <input type="text" placeholder="b" id="ellipse-b"/>cm
                     </div>
                   </div>
                   <div class="btn">
-                    <button class="btn btn-primary w-75">Calculate</button>
+                    <button class="btn btn-primary w-75" id="ellipse-btn">Calculate</button>
                   </div>
                 </div>
               </div>
@@ -185,6 +187,6 @@
       integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
       crossorigin="anonymous"
     ></script>
-    <script src="app.js"></script>
+    <script src="js/app.js"></script>
   </body>
 </html>

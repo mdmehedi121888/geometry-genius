@@ -32,6 +32,9 @@ body {
 .blog-btn {
   margin-right: 50px;
 }
+.blog-btn a{
+  text-decoration: none;
+}
 
 /* first row section  */
 
@@ -44,7 +47,7 @@ body {
   /* margin: 50px 50px; */
 }
 .area-section,
-.area-calculate-section {
+.area-calculate-container {
   box-sizing: border-box;
   border: 1px solid rgba(17, 17, 17, 0.1);
   border-radius: 8px;
@@ -53,6 +56,7 @@ body {
   flex-direction: column;
   /* justify-content: center; */
 }
+
 .area-image {
   margin-top: 20px;
   /* width: 243px;
